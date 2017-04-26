@@ -27,7 +27,7 @@ class StockPicking(orm.Model):
             self, cr, uid, pick, result, carrier, label, context=None):
         "Methode nouveau web service"
         if result.get('tracking'):
-            carrier['carrier_tracking_ref'] = result['tracking'].get('parcelNumber')
+            carrier['carrier_tracking_ref'] = result['tracking'].get('number')
         # ^LS (Label Shift) allows to shift all field
         # positions to the left
         # ^LS0000 is neutral position sent by web service
